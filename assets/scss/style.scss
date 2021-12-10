@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/Poppins-ExtraLight.ttf);
+}
+
+@mixin fleks{
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin centriranje{
+    width: 80%;
+    margin: 0px auto;
+}
+
+
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color:white;
+    
+    .container{
+        @include centriranje;
+        @include fleks;
+        justify-content: space-between;
+
+        .logo{
+            padding-top: 5px;
+            font-size: 18px;
+
+            a{
+                text-decoration: none;
+                color: rgb(26, 26, 26);
+
+                span{
+                    color: #d69c1e;
+                }
+            }
+
+            :hover{
+                color:#d69c1e;
+                transition: 0.3s;
+               
+            }
+        }
+
+
+        .toggle-button{
+            position: absolute;
+            top:.7rem;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+
+            .bar{
+                height: 3px;
+                width: 100%;
+                background-color: black;
+                border-radius: 10px;
+            }
+
+        }
+
+        @media (max-width:400px) {
+            .toggle-button{
+                display: flex;
+
+            }
+
+            nav{
+
+                .active{
+                    display: flex;
+                }
+
+                display: none;
+                width: 100%;
+               ul{
+                   width: 100%;
+                   flex-direction: column;
+               }
+
+               li{
+                   text-align: center;
+
+               }
+
+               a{
+                   padding: .5rem 1rem;
+               }
+
+            }
+
+            header{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+        }
+
+        nav{
+
+
+            ul{
+                @include fleks;
+                justify-content: center;
+                text-transform: uppercase;
+
+                 li{
+                    padding:20px;
+                    list-style-type: none;
+                    font-size: 18px; 
+                    font-weight: bold;
+                    :hover{
+                        color: #d69c1e;
+                        transition: 0.3s;
+                    }
+                     a{
+                        text-decoration: none;
+                        color:rgb(26, 26, 26);
+                 }
+            }
+        }
+    }
+}}
+
+main{
+
+    .cover{
+        
+        height: 100vh;
+        width: 100%;
+        @include fleks;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("../images/coverpicture.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    
+
+        .cover-container{
+
+            width: 40%;       
+            background-color: white;
+            opacity: 0.8;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 4px 4px rgb(26, 26, 26);
+            
+
+          
+
+
+            .heading{
+    
+                h2{ 
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 30px;
+                    font-style:italic;
+                    font-weight: bold;
+                    color: #d69c1e;
+                }
+            }
+        }
+       
+    }
+
+
+    .products{
+        width: 100%;
+        @include fleks;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .products-heading{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+           
+
+        }
+
+        .inner-products{
+            width: 90%;
+            padding:20px;
+            border: 1px black solid;
+
+            .product-proteins{
+                width: 100%;
+                border: red 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .picture{
+                    width:30%;
+                    border: green 1px solid;
+                }
+            }
+        }
+
+        
+    }
+
+    .staff{
+        width: 100%;
+        @include fleks;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: yellow 1px solid;
+
+
+        .staff-heading{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+
+         
+            
+        }
+
+       .inner-staff{
+            width: 90%;
+            padding:20px;
+            border: 1px black solid;
+
+            .staff-bio{
+                width: 100%;
+                border: red 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+
+                .member{
+                    width:30%;
+                    border: green 1px solid;
+                }
+            }
+       }
+    }
+
+
+    .author{
+        width: 100%;
+        @include fleks;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       
+
+
+        .author-heading{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+
+        }
+
+        .author-wrapper{
+            width: 90%;
+            padding:20px;
+           
+            display: flex;
+            justify-content:space-around;
+
+            .author-pic{
+                width: 50%;
+            }
+
+            .text{
+                width:50%;
+                margin-top:80px;
+            }
+        }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
