@@ -55,61 +55,61 @@ header{
         }
 
 
-        .toggle-button{
-            position: absolute;
-            top:.7rem;
-            right: 1rem;
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 21px;
+        // .toggle-button{
+        //     position: absolute;
+        //     top:.7rem;
+        //     right: 1rem;
+        //     display: none;
+        //     flex-direction: column;
+        //     justify-content: space-between;
+        //     width: 30px;
+        //     height: 21px;
 
-            .bar{
-                height: 3px;
-                width: 100%;
-                background-color: black;
-                border-radius: 10px;
-            }
+        //     .bar{
+        //         height: 3px;
+        //         width: 100%;
+        //         background-color: black;
+        //         border-radius: 10px;
+        //     }
 
-        }
+        // }
 
-        @media (max-width:400px) {
-            .toggle-button{
-                display: flex;
+        // @media (max-width:400px) {
+        //     .toggle-button{
+        //         display: flex;
 
-            }
+        //     }
 
-            nav{
+        //     nav{
 
-                .active{
-                    display: flex;
-                }
+        //         .active{
+        //             display: flex;
+        //         }
 
-                display: none;
-                width: 100%;
-               ul{
-                   width: 100%;
-                   flex-direction: column;
-               }
+        //         display: none;
+        //         width: 100%;
+        //        ul{
+        //            width: 100%;
+        //            flex-direction: column;
+        //        }
 
-               li{
-                   text-align: center;
+        //        li{
+        //            text-align: center;
 
-               }
+        //        }
 
-               a{
-                   padding: .5rem 1rem;
-               }
+        //        a{
+        //            padding: .5rem 1rem;
+        //        }
 
-            }
+        //     }
 
-            header{
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        //     header{
+        //         flex-direction: column;
+        //         align-items: flex-start;
+        //     }
             
-        }
+        // }
 
         nav{
 
