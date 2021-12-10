@@ -55,61 +55,7 @@ header{
         }
 
 
-        // .toggle-button{
-        //     position: absolute;
-        //     top:.7rem;
-        //     right: 1rem;
-        //     display: none;
-        //     flex-direction: column;
-        //     justify-content: space-between;
-        //     width: 30px;
-        //     height: 21px;
-
-        //     .bar{
-        //         height: 3px;
-        //         width: 100%;
-        //         background-color: black;
-        //         border-radius: 10px;
-        //     }
-
-        // }
-
-        // @media (max-width:400px) {
-        //     .toggle-button{
-        //         display: flex;
-
-        //     }
-
-        //     nav{
-
-        //         .active{
-        //             display: flex;
-        //         }
-
-        //         display: none;
-        //         width: 100%;
-        //        ul{
-        //            width: 100%;
-        //            flex-direction: column;
-        //        }
-
-        //        li{
-        //            text-align: center;
-
-        //        }
-
-        //        a{
-        //            padding: .5rem 1rem;
-        //        }
-
-        //     }
-
-        //     header{
-        //         flex-direction: column;
-        //         align-items: flex-start;
-        //     }
-            
-        // }
+ 
 
         nav{
 
@@ -204,18 +150,18 @@ main{
         .inner-products{
             width: 90%;
             padding:20px;
-            border: 1px black solid;
+            
 
             .product-proteins{
                 width: 100%;
-                border: red 1px solid;
+                
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
 
                 .picture{
                     width:30%;
-                    border: green 1px solid;
+                    
                 }
             }
         }
@@ -229,7 +175,7 @@ main{
         justify-content: center;
         align-items: center;
         text-align: center;
-        border: yellow 1px solid;
+        
 
 
         .staff-heading{
@@ -246,11 +192,11 @@ main{
        .inner-staff{
             width: 90%;
             padding:20px;
-            border: 1px black solid;
+            
 
             .staff-bio{
                 width: 100%;
-                border: red 1px solid;
+                
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -258,7 +204,7 @@ main{
 
                 .member{
                     width:30%;
-                    border: green 1px solid;
+                   
                 }
             }
        }
