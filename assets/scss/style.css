@@ -217,12 +217,10 @@ main .products .products-heading {
 main .products .inner-products {
   width: 90%;
   padding: 20px;
-  border: 1px black solid;
 }
 
 main .products .inner-products .product-proteins {
   width: 100%;
-  border: red 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,7 +233,6 @@ main .products .inner-products .product-proteins {
 
 main .products .inner-products .product-proteins .picture {
   width: 30%;
-  border: green 1px solid;
 }
 
 main .staff {
@@ -252,7 +249,6 @@ main .staff {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border: yellow 1px solid;
 }
 
 main .staff .staff-heading {
@@ -268,12 +264,10 @@ main .staff .staff-heading {
 main .staff .inner-staff {
   width: 90%;
   padding: 20px;
-  border: 1px black solid;
 }
 
 main .staff .inner-staff .staff-bio {
   width: 100%;
-  border: red 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +280,13 @@ main .staff .inner-staff .staff-bio {
 
 main .staff .inner-staff .staff-bio .member {
   width: 30%;
-  border: green 1px solid;
+  font-size: 20px;
+}
+
+main .staff .inner-staff .staff-bio .member img {
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #d69c1e;
+          box-shadow: 5px 5px 5px #d69c1e;
 }
 
 main .author {
@@ -332,6 +332,12 @@ main .author .author-wrapper .author-pic {
 main .author .author-wrapper .text {
   width: 50%;
   margin-top: 80px;
+  font-size: large;
+}
+
+main .author .author-wrapper .text a {
+  color: #d69c1e;
+  text-decoration: none;
 }
 
 main .contact {

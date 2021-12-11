@@ -23,7 +23,7 @@ products.appendChild(proteins);
 
 //staff generation
 
-let pMember = ["MARKO MARKOVIC", "MARKO MARKOVIC", "MARKO MARKOVIC"];
+let pMember = ["Jack Hallow", "Maria Mill", "Bob Jackson"];
 let members = document.getElementById("inner-staff");
 
 let staff = document.createElement("div");

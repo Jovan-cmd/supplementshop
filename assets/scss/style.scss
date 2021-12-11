@@ -204,18 +204,18 @@ main{
         .inner-products{
             width: 90%;
             padding:20px;
-            border: 1px black solid;
+          
 
             .product-proteins{
                 width: 100%;
-                border: red 1px solid;
+               
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
 
                 .picture{
                     width:30%;
-                    border: green 1px solid;
+                   
                 }
             }
         }
@@ -229,7 +229,7 @@ main{
         justify-content: center;
         align-items: center;
         text-align: center;
-        border: yellow 1px solid;
+        
 
 
         .staff-heading{
@@ -246,19 +246,24 @@ main{
        .inner-staff{
             width: 90%;
             padding:20px;
-            border: 1px black solid;
+            
 
             .staff-bio{
                 width: 100%;
-                border: red 1px solid;
+                
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-
+                
 
                 .member{
                     width:30%;
-                    border: green 1px solid;
+                    font-size: 20px;
+
+                    img{
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 5px #d69c1e;
+                    }
                 }
             }
        }
@@ -297,6 +302,12 @@ main{
             .text{
                 width:50%;
                 margin-top:80px;
+                font-size: large;
+
+                a{
+                    color: #d69c1e;
+                    text-decoration: none;
+                }
             }
         }
 
