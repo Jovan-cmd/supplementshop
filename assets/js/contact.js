@@ -1,4 +1,4 @@
-let trainerArray = ["Choose your trainer" ,"Jack Hallow", "Maria Mill", "Bob Jackson"];
+let trainerArray = ["Choose your consultant" ,"Jack Hallow", "Maria Mill", "Bob Jackson"];
 let selectTrainer = document.getElementById("trainer");
 
 for(let i = 0; i < trainerArray.length; i++){
@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
     checkName(nameSurname, 0, "Your name is invalid, example: \"Name Surname\"");
     checkEmail(email, 1, "Your email is invalid, example: \"something@domain.com\"");
     checkAge(age, 2, "Please input a number of years", "Sorry, you need to be older to get a trainer");
-    checkTrainer(trainer, 3, "Please select a trainer.");
+    checkTrainer(trainer, 3, "Please select a consultant.");
     if (mistakes == 0){
         alert("Thank you for ordering your training plan, we will contact you soon!");
         setTimeout("location.reload(true);",0);

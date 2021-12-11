@@ -14,12 +14,27 @@
     <title>Supplement Shop</title>
 </head>
 <body>
+
+    <div class="menu-links">
+        <div class="button">
+            <a href="" onclick="closeMenu()">X</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#author">Author</a></li>
+            <li><a href="#contact">Contact</a></li>
+           
+        </ul>
+    </div>
+
     <header>
+       
         <div class="container">
             <div class="logo">
                 <h1><a href="index.html"><span>S</span>upplement <span>S</span>hop</a></h1>
             </div>
-            <a href="#" class="toggle-button">
+            <a href="#" class="toggle-button" onclick="openMenu()">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -50,7 +65,7 @@
             
         </div>
         <section class="products" id="products">
-            <div class="products-heading"><h3>-------------PRODUCTS-------------</h3>
+            <div class="products-heading"><h3>PRODUCTS</h3>
             </div>
 
             <div id="inner-products" class="inner-products">
@@ -59,7 +74,7 @@
           
         </section>
         <section class="staff">
-            <div class="staff-heading"><h3>-------------OUR STAFF-------------</h3></div>
+            <div class="staff-heading"><h3>OUR STAFF</h3></div>
 
             <div id="inner-staff" class="inner-staff">
                 <!-- generated with javascript -->
@@ -67,7 +82,7 @@
      
        <section class="author" id="author">
            <div class="author-heading">
-               <h3>-------------ABOUT AUTHOR-------------</h3>
+               <h3>ABOUT AUTHOR</h3>
            </div>
            <div class="author-wrapper">
                 <div class="author-pic">
@@ -85,16 +100,16 @@
 
        <section class="contact" id="contact">
             <div class="contact-heading">
-                <h3>------------- To make results with us, fill the form! -------------</h3>
+                <h3> To make results with us, fill the form! </h3>
             </div>
             <form id="form">
-                <div class="error"></div>
+                <span class="error"></span>
                 <input id="name" type="text" placeholder="First and last name"/>
-                <div class="error"></div>
+                <span class="error"></span>
                 <input id="email" type="email" placeholder="E-mail"/>
-                <div class="error"></div>
+                <span class="error"></span>
                 <input id="age" type="text" placeholder="Age"/>
-                <div class="error"></div>
+                <span class="error"></span>
                 <select name="trainer" id="trainer">
                     <!-- generated with javascript -->
                 </select>

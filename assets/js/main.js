@@ -47,3 +47,20 @@ for(let i = 0; i < 3; i++){
 }
 
 members.appendChild(staff);
+
+
+var menuLinks = document.querySelector(".menu-links");
+function openMenu(){
+    
+    menuLinks.classList.add("menu-links-open");
+}
+
+function closeMenu(){
+    menuLinks.classList.remove("menu-links-open");
+}
+
+
+
+
+
+
