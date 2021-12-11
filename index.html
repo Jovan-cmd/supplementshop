@@ -18,6 +18,11 @@
             <div class="logo">
                 <h1><a href="index.html"><span>S</span>upplement <span>S</span>hop</a></h1>
             </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -47,40 +52,16 @@
             <div class="products-heading"><h3>-------------PRODUCTS-------------</h3>
             </div>
 
-            <div class="inner-products">
-                <div class="product-proteins">
-                    <div class="picture">
-                        <img src="assets/images/type2proteinIzmenjeno.jpg" alt="">
-                    </div>
-                    <div class="picture">
-                        <img src="assets/images/100whey.jpg" alt="">
-                    </div>
-                    <div class="picture">
-                        <img src="assets/images/proteinmass.jpg" alt="">
-                    </div>
-                    
-                </div>
+            <div id="inner-products" class="inner-products">
+                <!-- generated with javascript-->
             </div>
           
         </section>
         <section class="staff">
             <div class="staff-heading"><h3>-------------OUR STAFF-------------</h3></div>
 
-            <div class="inner-staff">
-                <div class="staff-bio">
-                    <div class="member">
-                        <img src="assets/images/personal-trainer1.jpg" alt="">
-                        <p>MARKO MARKOVIC</p>
-                    </div>
-                    <div class="member">
-                        <img src="assets/images/personal-trainer-2.jpg" alt="">
-                        <p>MARKO MARKOVIC</p>
-                    </div>
-                    <div class="member">
-                        <img src="assets/images/personal-trainer-3.jpg" alt="">
-                        <p>MARKO MARKOVIC</p>
-                    </div>
-                </div>
+            <div id="inner-staff" class="inner-staff">
+                <!-- generated with javasript -->
             </div>
      
        <section class="author">
@@ -93,20 +74,45 @@
                 </div>
                 <div class="text">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    
                     </p>
                 </div>
            </div>
            
        </section>
 
-       <section class="contact">
+       <section class="contact">]
+            <div class="contact-heading">
+                <h3>------------- To make results with us, fill the form! -------------</h3>
+            </div>
+            <form id="form">
+                <div class="error"></div>
+                <input id="name" type="text" placeholder="First and last name">
+                <div class="error"></div>
+                <input id="email" type="email" placeholder="E-mail">
+                <div class="error"></div>
+                <input id="age" type="text" placeholder="Age">
+                <div class="error"></div>
+                <select name="trainer" id="trainer">
 
+                </select>
+                <div class="buttons">
+                    <button type="submit">
+                        Order Apointment
+                    </button>
+                    <button type="reset">
+                        Reset
+                    </button>
+                </div>
+            </form>
        </section>
 
 
 
     </main>    
 
+    <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/contact.js"></script>
 </body>
 </html>

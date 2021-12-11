@@ -54,6 +54,68 @@ header .container .logo :hover {
   transition: 0.3s;
 }
 
+header .container .toggle-button {
+  position: absolute;
+  top: .7rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+header .container .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  header .container .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .container nav {
+    display: none;
+    width: 100%;
+  }
+  header .container nav .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .container nav ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .container nav li {
+    text-align: center;
+  }
+  header .container nav a {
+    padding: .5rem 1rem;
+  }
+  header .container header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 header .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,5 +332,72 @@ main .author .author-wrapper .author-pic {
 main .author .author-wrapper .text {
   width: 50%;
   margin-top: 80px;
+}
+
+main .contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+main .contact .contact-heading {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}
+
+main .contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 40%;
+}
+
+main .contact form input[type=text], main .contact form input[type=email], main .contact form input[type=tel], main .contact form select {
+  width: 100%;
+  padding: 20px 10px;
+  margin: 10px 0px;
+}
+
+main .contact form .buttons {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .contact form .buttons button {
+  width: 48%;
+}
+
+main .contact form .error {
+  font-size: 12px;
+  margin-top: 2px;
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */
