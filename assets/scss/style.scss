@@ -37,11 +37,12 @@ header{
         .logo{
             padding-top: 5px;
             font-size: 18px;
+            
 
             a{
                 text-decoration: none;
                 color: rgb(26, 26, 26);
-
+                
                 span{
                     color: #d69c1e;
                 }
@@ -307,6 +308,9 @@ main{
                 a{
                     color: #d69c1e;
                     text-decoration: none;
+                    font-weight: bold;
+                    
+                  
                 }
             }
         }

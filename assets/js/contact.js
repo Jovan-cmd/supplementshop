@@ -1,4 +1,4 @@
-let trainerArray = ["Choose your trainer" ,"MARKO MARKOVIC", "MARKO MARKOVIC", "MARKO MARKOVIC"];
+let trainerArray = ["Choose your trainer" ,"Jack Hallow", "Maria Mill", "Bob Jackson"];
 let selectTrainer = document.getElementById("trainer");
 
 for(let i = 0; i < trainerArray.length; i++){
@@ -31,7 +31,7 @@ form.addEventListener("submit", (e) => {
     checkAge(age, 2, "Please input a number of years", "Sorry, you need to be older to get a trainer");
     checkTrainer(trainer, 3, "Please select a trainer.");
     if (mistakes == 0){
-        alert("Thank you for ordering yout training plan, we will contact you soon!");
+        alert("Thank you for ordering your training plan, we will contact you soon!");
         setTimeout("location.reload(true);",0);
     }
 });

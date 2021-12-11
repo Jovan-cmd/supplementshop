@@ -338,6 +338,7 @@ main .author .author-wrapper .text {
 main .author .author-wrapper .text a {
   color: #d69c1e;
   text-decoration: none;
+  font-weight: bold;
 }
 
 main .contact {
