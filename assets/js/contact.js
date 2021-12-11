@@ -74,7 +74,7 @@ let checkAge = (id, i, message, message2) => {
     }
 };
 let checkTrainer = (id, i, message) => {
-    if (id.value == "Choose your trainer") {
+    if (id.value == "Choose your consultant") {
         inputErrors[i].innerHTML = message;
         mistakes++;
     }
