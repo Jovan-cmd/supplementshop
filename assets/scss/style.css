@@ -406,4 +406,38 @@ main .contact form .error {
   margin-top: 2px;
   color: red;
 }
+
+main footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #1a1a1a 1px solid;
+}
+
+main footer ul {
+  width: 80%;
+  padding: 10px;
+  color: #d69c1e;
+  border: yellow 1px solid;
+}
+
+main footer ul li {
+  display: inline;
+  padding: 0px 20px;
+}
+
+main footer ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+main footer ul li a i {
+  font-size: 14px;
+}
 /*# sourceMappingURL=style.css.map */

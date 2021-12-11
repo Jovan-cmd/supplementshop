@@ -359,6 +359,43 @@ main{
             }
         }
     }
+
+
+    footer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border:rgb(26, 26, 26) 1px solid;
+       
+
+        ul{
+            width: 80%;
+            padding: 10px;        
+            color: #d69c1e;
+            border:yellow 1px solid;
+         
+
+
+            li{
+                display: inline;
+                
+                padding: 0px 20px;
+
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: rgb(26, 26, 26);
+                    font-weight: bold;
+
+                  i{
+                      font-size: 14px;
+                  }
+                }
+         
+            }
+        }
+    }
+
 }
 
 
