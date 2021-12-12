@@ -59,8 +59,14 @@ function closeMenu(){
     menuLinks.classList.remove("menu-links-open");
 }
 
-
-
+var menuLinksA = document.querySelectorAll('.menu-links ul li a');
+for (let i = 0; i < menuLinksA.length; i++) {
+  menuLinksA[i].addEventListener('click', () => {
+    if (menuLinks.classList.contains('menu-links-open')) {
+      menuLinks.classList.remove('menu-links-open');
+    }
+  })
+}
 
 
 

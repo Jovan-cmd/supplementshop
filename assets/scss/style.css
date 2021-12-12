@@ -14,6 +14,10 @@
   src: url(../fonts/Poppins-ExtraLight.ttf);
 }
 
+html {
+  scroll-padding-top: 65px;
+}
+
 .menu-links-open {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -41,12 +45,27 @@
           flex-direction: column;
 }
 
+.menu-links ul li {
+  margin-bottom: 10px;
+}
+
+.menu-links ul li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .menu-links .button {
-  margin-bottom: 40vh;
+  margin-top: 50px;
+  margin-bottom: 33vh;
 }
 
 .menu-links .button a {
+  text-decoration: none;
   font-size: 40px;
+}
+
+.toggle-button {
+  margin-top: 10px;
 }
 
 header {
@@ -110,17 +129,6 @@ header .container .toggle-button .bar {
   width: 100%;
   background-color: black;
   border-radius: 10px;
-}
-
-@media (max-width: 600px) {
-  header .container .toggle-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header .container nav {
-    display: none;
-  }
 }
 
 header .container nav ul {
@@ -243,7 +251,7 @@ main .products .inner-products .product-proteins .picture {
 }
 
 main .products .inner-products .product-proteins .picture img {
-  width: 100%;
+  width: 100% !important;
 }
 
 main .staff {
@@ -260,6 +268,7 @@ main .staff {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 main .staff .staff-heading {
@@ -291,7 +300,6 @@ main .staff .inner-staff .staff-bio {
 
 main .staff .inner-staff .staff-bio .member {
   width: 30%;
-  font-size: 20px;
 }
 
 main .staff .inner-staff .staff-bio .member img {
@@ -339,12 +347,34 @@ main .author .author-wrapper {
 
 main .author .author-wrapper .author-pic {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .author .author-wrapper .text {
   width: 50%;
-  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: large;
+  padding: 0 0 0 20px;
+}
+
+main .author .author-wrapper .text p {
+  text-align: left;
 }
 
 main .author .author-wrapper .text a {
@@ -429,27 +459,126 @@ main footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-main footer ul {
+main footer .footer-links {
   width: 80%;
   padding: 10px;
   color: #d69c1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main footer ul li {
+main footer .footer-links li {
   display: inline;
   padding: 0px 20px;
 }
 
-main footer ul li a {
+main footer .footer-links li a {
   text-decoration: none;
   font-size: 18px;
   color: #1a1a1a;
   font-weight: bold;
 }
 
-main footer ul li a i {
+main footer .footer-links li a i {
   font-size: 14px;
+}
+
+@media screen and (max-width: 1304px) {
+  .cover .cover-container .heading h2 {
+    font-size: 32px;
+  }
+  .cover .cover-container .heading p {
+    font-size: 27px !important;
+  }
+}
+
+@media screen and (max-width: 1185px) {
+  .cover .cover-container .heading h2 {
+    font-size: 30px !important;
+  }
+  .cover .cover-container .heading p {
+    font-size: 25px !important;
+  }
+  .author .author-wrapper .text {
+    font-size: medium !important;
+  }
+}
+
+@media screen and (max-width: 1105px) {
+  header .container {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px;
+  }
+  .cover .cover-container .heading h2 {
+    font-size: 35px !important;
+  }
+  .cover .cover-container .heading p {
+    font-size: 22px !important;
+  }
+  .author .author-wrapper .text {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 982px) {
+  .toggle-button {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  nav {
+    display: none;
+  }
+  .cover .cover-container .heading h2 {
+    font-size: 30px !important;
+  }
+  .cover .cover-container .heading p {
+    font-size: 28px !important;
+  }
+  footer .footer-links li a {
+    font-size: 10px;
+  }
+  .author .author-wrapper .text {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .author .author-wrapper .text {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 874px) {
+  .inner-products .product-proteins {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .inner-products .product-proteins .picture {
+    width: 50% !important;
+  }
+  .inner-staff .staff-bio {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .inner-staff .staff-bio .member {
+    width: 50% !important;
+  }
+  .author .author-wrapper .text {
+    font-size: 13px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
