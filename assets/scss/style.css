@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@font-face {
+  font-family: "myFont";
+  src: url(../fonts/Poppins-ExtraLight.ttf);
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -6,12 +10,7 @@
           box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
-
-@font-face {
-  font-family: myFont;
-  src: url(../fonts/Poppins-ExtraLight.ttf);
+  font-family: "myFont";
 }
 
 html {
@@ -91,6 +90,7 @@ header .container {
 header .container .logo {
   padding-top: 5px;
   font-size: 18px;
+  width: 30%;
 }
 
 header .container .logo a {
@@ -131,6 +131,10 @@ header .container .toggle-button .bar {
   border-radius: 10px;
 }
 
+header .container nav {
+  width: 60%;
+}
+
 header .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +145,7 @@ header .container nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
 header .container nav ul li {
@@ -251,7 +256,7 @@ main .products .inner-products .product-proteins .picture {
 }
 
 main .products .inner-products .product-proteins .picture img {
-  width: 100% !important;
+  width: 100%;
 }
 
 main .staff {
@@ -319,9 +324,6 @@ main .author {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -343,6 +345,8 @@ main .author .author-wrapper {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .author .author-wrapper .author-pic {
@@ -490,47 +494,22 @@ main footer .footer-links li a i {
   font-size: 14px;
 }
 
-@media screen and (max-width: 1304px) {
-  .cover .cover-container .heading h2 {
-    font-size: 32px;
-  }
-  .cover .cover-container .heading p {
-    font-size: 27px !important;
+@media screen and (max-width: 1024px) {
+  main .cover .cover-container .heading h2, header .container .logo a, main .cover .cover-container .heading p {
+    font-size: 24px;
   }
 }
 
-@media screen and (max-width: 1185px) {
-  .cover .cover-container .heading h2 {
-    font-size: 30px !important;
+@media screen and (max-width: 770px) {
+  header .container .logo a {
+    font-size: 21px;
   }
-  .cover .cover-container .heading p {
-    font-size: 25px !important;
+  main .cover .cover-container {
+    width: 80%;
   }
-  .author .author-wrapper .text {
-    font-size: medium !important;
+  main .author .author-wrapper .text p {
+    font-size: 12px;
   }
-}
-
-@media screen and (max-width: 1105px) {
-  header .container {
-    width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0 20px;
-  }
-  .cover .cover-container .heading h2 {
-    font-size: 35px !important;
-  }
-  .cover .cover-container .heading p {
-    font-size: 22px !important;
-  }
-  .author .author-wrapper .text {
-    font-size: 16px !important;
-  }
-}
-
-@media screen and (max-width: 982px) {
   .toggle-button {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -545,40 +524,141 @@ main footer .footer-links li a i {
   .cover .cover-container .heading p {
     font-size: 28px !important;
   }
+  .products .inner-products .product-proteins {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .products .inner-products .product-proteins .picture {
+    width: 48% !important;
+    text-align: center !important;
+  }
+  .products .inner-products .product-proteins .picture img {
+    width: 50% !important;
+  }
+  .staff .staff-heading {
+    font-size: 25px !important;
+  }
+  .staff .inner-staff .staff-bio {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .staff .inner-staff .staff-bio .member {
+    width: 48% !important;
+    text-align: center !important;
+  }
+  .staff .inner-staff .staff-bio .member img {
+    width: 70% !important;
+  }
   footer .footer-links li a {
-    font-size: 10px;
+    font-size: 10px !important;
   }
   .author .author-wrapper .text {
     font-size: 15px !important;
   }
 }
 
-@media screen and (max-width: 874px) {
-  .author .author-wrapper .text {
-    font-size: 14px !important;
+@media screen and (max-width: 430px) {
+  main .author .author-wrapper .author-pic, main .author .author-wrapper .text {
+    width: 100%;
+  }
+  main .author .author-wrapper .text p {
+    padding-top: 10px;
+  }
+  header .container .logo {
+    width: 60% !important;
+  }
+  .products .inner-products .product-proteins .picture {
+    width: 100% !important;
+  }
+  .staff .staff-heading {
+    font-size: 25px !important;
+  }
+  .staff .inner-staff .staff-bio .member {
+    width: 100% !important;
+  }
+  .contact .contact-heading {
+    font-size: 30px;
+  }
+  .contact form {
+    width: 90% !important;
+  }
+  .contact form input[type=text], .contact form input[type=email], .contact form input[type=tel], .contact form select {
+    width: 100%;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    border: #1a1a1a 1px solid;
+  }
+  .contact form .buttons {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact form .buttons button {
+    width: 48%;
+  }
+  .contact form .error {
+    font-size: 12px;
+    margin-top: 2px;
+    color: red;
+  }
+  main footer .footer-links li {
+    display: block !important;
+    padding: 0px 20px;
+  }
+  footer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  footer .footer-links {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 874px) {
-  .inner-products .product-proteins {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+@media screen and (max-width: 380px) {
+  header .container .logo a {
+    font-size: 18px !important;
   }
-  .inner-products .product-proteins .picture {
-    width: 50% !important;
+  main .author .author-heading h3 {
+    font-size: 16px !important;
   }
-  .inner-staff .staff-bio {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  main .author .contact-heading h3 {
+    font-size: 16px !important;
   }
-  .inner-staff .staff-bio .member {
-    width: 50% !important;
+}
+
+@media screen and (max-width: 325px) {
+  header .container .logo a {
+    font-size: 16px !important;
   }
-  .author .author-wrapper .text {
-    font-size: 13px !important;
+  main .cover .cover-container .heading h2, header .container .logo a, main .cover .cover-container .heading p {
+    font-size: 16px !important;
+  }
+  main .products .products-heading h3, main .staff .staff-heading h3 {
+    font-size: 16px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
