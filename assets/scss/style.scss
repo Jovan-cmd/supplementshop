@@ -7,7 +7,6 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     font-family: "myFont";
 }
 @mixin fleks{
@@ -23,16 +22,18 @@ html{
     scroll-padding-top:65px;
 }
 
-
+ul{
+    list-style-type: none;
+}
 .menu-links-open{
     display: flex !important; 
-    
 }
+
 
 .menu-links{
     display: none;
-    position: absolute;
-    z-index: 999;
+    position: fixed;
+    z-index: 9;
     justify-content: flex-start;
     align-items: center;
     top: 0;
@@ -83,32 +84,27 @@ header{
         @include centriranje;
         @include fleks;
         justify-content: space-between;
-
         .logo{
             padding-top: 5px;
             font-size: 18px;
-            width: 30%;
-
+            width: 100%;
+            text-align: center;
             a{
                 text-decoration: none;
                 color: rgb(26, 26, 26);
-                
                 span{
                     color: #d69c1e;
                 }
             }
-
             :hover{
                 color:#d69c1e;
                 transition: 0.3s;
-               
             }
         }
 
-
         .toggle-button{
-            position: absolute;
-            top:.7rem;
+            position: fixed;
+            top: .7rem;
             right: 1rem;
             display: none;
             flex-direction: column;
@@ -130,7 +126,7 @@ header{
       
 
         nav{
-            width: 60%;
+            width: 100%;
             ul{
                 @include fleks;
                 justify-content: center;
@@ -154,6 +150,14 @@ header{
         }
     }
 }}
+
+.dugmeMeni{
+    padding: 10px 0px;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
 
 main{
 
@@ -206,7 +210,6 @@ main{
         width: 100%;
         @include fleks;
         justify-content: center;
-        align-items: center;
         text-align: center;
 
         .products-heading{
@@ -218,26 +221,42 @@ main{
            
 
         }
+        p{
+            font-size: 0.5em;
+        }
 
         .inner-products{
             width: 90%;
             padding:20px;
-          
+            
 
             .product-proteins{
-                width: 100%;
-               
+                width: 85%;
+                margin: 0px auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
-
-                .picture{
-                    width:30%;
-                   
-                    img{
-                        width: 100%;
+                .product{
+                    width: 30%;
+                    height: 0%;
+                    padding-bottom: 20px;
+                    h2{
+                        padding: 10px 0px;
                     }
+                    .picture{
+                        img{
+                            width: 50%;
+                        }
+                    }
+                    @for $i from 1 through 3 {
+                        #moreText#{$i} {
+                            width: 100%;
+                            display: none;
+                            font-size: 1.8em;
+                        }
+                      }
                 }
+                
             }
         }
 
@@ -251,6 +270,7 @@ main{
         align-items: center;
         text-align: center;
         background-color: rgba(0,0,0,.1);
+        padding:20px 0px;
 
 
         .staff-heading{
@@ -266,27 +286,28 @@ main{
 
        .inner-staff{
             width: 90%;
-            padding:20px;
+            padding:20px 0px;
             
 
             .staff-bio{
-                width: 100%;               
+                width: 100%;
+                margin: 0px auto;            
                 display: flex;
-                align-items: center;
                 justify-content: space-around;
-                
 
                 .member{
                     width:30%;
-                    
-
+                    text-align: center;
+                    padding: 20px 0px;
                     img{
                         border-radius: 10px;
                         box-shadow: 5px 5px 5px #d69c1e;
-                        width: 100%;
+                        width: 20%;
+                        margin: 0px auto;
                     }
-
-                  
+                    p{
+                        padding-top: 20px;
+                    }
                 }
             }
        }
@@ -323,6 +344,9 @@ main{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                img{
+                    width: 100%;
+                }
             }
 
             .text{
@@ -350,7 +374,9 @@ main{
 
 
     }
-
+    .labelMove{
+        margin-right: 50px;
+    }
     .contact{
         width: 100%;
         @include fleks;
@@ -380,7 +406,15 @@ main{
                 margin: 10px 0px;
                 border:rgb(26, 26, 26) 1px solid; 
             }
-
+            .checkBoxTerms{
+                input[type=checkbox]{
+                    width: 20%;
+                    margin-top: 20px;
+                }
+                label{
+                    width: 80%;
+                }
+            }
             .buttons{
                 margin-top: 30px;
                 display: flex;
@@ -394,7 +428,7 @@ main{
                 font-size: 12px;
                 margin-top: 2px;
                 color: red;
-                
+                font-weight: bold;
             }
         }
     }
@@ -439,6 +473,8 @@ main{
 
 
 // responsive
+
+
 @media screen and (max-width: 1024px) {
     main .cover .cover-container .heading h2, header .container .logo a, main .cover .cover-container .heading p {
         font-size: 24px;
@@ -446,6 +482,9 @@ main{
 }
 
 @media screen and (max-width: 770px) {
+    .dugmeMeni{
+        display: block;
+    }
     header .container .logo a{
         font-size: 21px;
     }
@@ -487,12 +526,9 @@ main{
 
             .product-proteins{
                 flex-wrap: wrap !important;
-                .picture{
+                .product{
                     width:48% !important;
                     text-align: center !important;
-                    img{
-                        width: 50% !important;
-                    }
                 }
             }
         }
@@ -506,28 +542,7 @@ main{
             font-size: 25px !important;
         }
 
-       .inner-staff{
-            
-
-            .staff-bio{
-                width: 100%;               
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                
-                .member{
-                    width: 48% !important;
-                    text-align: center !important;
-
-                    img{
-                        width: 70% !important;
-                    }
-
-                  
-                }
-            }
-       }
+       
     }
     footer{
 
@@ -560,16 +575,11 @@ main{
     main .author .author-wrapper .text p {
         padding-top: 10px;
     }
-    header .container .logo{
-        width: 60% !important;
-    }
     .products{
 
         .inner-products{
-            
-
             .product-proteins{
-                .picture{
+                .product{
                     width: 100% !important;
                 }
             }
@@ -583,19 +593,6 @@ main{
         .staff-heading{
             font-size: 25px !important;
         }
-
-       .inner-staff{
-            
-
-            .staff-bio{
-                
-                .member{
-                    width: 100% !important;
-
-                  
-                }
-            }
-       }
     }
     .contact{
         .contact-heading{

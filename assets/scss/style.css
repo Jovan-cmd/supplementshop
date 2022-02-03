@@ -9,12 +9,15 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   font-family: "myFont";
 }
 
 html {
   scroll-padding-top: 65px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .menu-links-open {
@@ -25,8 +28,8 @@ html {
 
 .menu-links {
   display: none;
-  position: absolute;
-  z-index: 999;
+  position: fixed;
+  z-index: 9;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -90,7 +93,8 @@ header .container {
 header .container .logo {
   padding-top: 5px;
   font-size: 18px;
-  width: 30%;
+  width: 100%;
+  text-align: center;
 }
 
 header .container .logo a {
@@ -109,7 +113,7 @@ header .container .logo :hover {
 }
 
 header .container .toggle-button {
-  position: absolute;
+  position: fixed;
   top: .7rem;
   right: 1rem;
   display: none;
@@ -132,7 +136,7 @@ header .container .toggle-button .bar {
 }
 
 header .container nav {
-  width: 60%;
+  width: 100%;
 }
 
 header .container nav ul {
@@ -164,6 +168,14 @@ header .container nav ul li :hover {
 header .container nav ul li a {
   text-decoration: none;
   color: #1a1a1a;
+}
+
+.dugmeMeni {
+  padding: 10px 0px;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  display: none;
 }
 
 main .cover {
@@ -218,9 +230,6 @@ main .products {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -234,13 +243,18 @@ main .products .products-heading {
   padding: 20px;
 }
 
+main .products p {
+  font-size: 0.5em;
+}
+
 main .products .inner-products {
   width: 90%;
   padding: 20px;
 }
 
 main .products .inner-products .product-proteins {
-  width: 100%;
+  width: 85%;
+  margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,12 +265,36 @@ main .products .inner-products .product-proteins {
       justify-content: space-around;
 }
 
-main .products .inner-products .product-proteins .picture {
+main .products .inner-products .product-proteins .product {
   width: 30%;
+  height: 0%;
+  padding-bottom: 20px;
 }
 
-main .products .inner-products .product-proteins .picture img {
+main .products .inner-products .product-proteins .product h2 {
+  padding: 10px 0px;
+}
+
+main .products .inner-products .product-proteins .product .picture img {
+  width: 50%;
+}
+
+main .products .inner-products .product-proteins .product #moreText1 {
   width: 100%;
+  display: none;
+  font-size: 1.8em;
+}
+
+main .products .inner-products .product-proteins .product #moreText2 {
+  width: 100%;
+  display: none;
+  font-size: 1.8em;
+}
+
+main .products .inner-products .product-proteins .product #moreText3 {
+  width: 100%;
+  display: none;
+  font-size: 1.8em;
 }
 
 main .staff {
@@ -274,6 +312,7 @@ main .staff {
           align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
 }
 
 main .staff .staff-heading {
@@ -288,30 +327,35 @@ main .staff .staff-heading {
 
 main .staff .inner-staff {
   width: 90%;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 main .staff .inner-staff .staff-bio {
   width: 100%;
+  margin: 0px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 main .staff .inner-staff .staff-bio .member {
   width: 30%;
+  text-align: center;
+  padding: 20px 0px;
 }
 
 main .staff .inner-staff .staff-bio .member img {
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 5px #d69c1e;
           box-shadow: 5px 5px 5px #d69c1e;
-  width: 100%;
+  width: 20%;
+  margin: 0px auto;
+}
+
+main .staff .inner-staff .staff-bio .member p {
+  padding-top: 20px;
 }
 
 main .author {
@@ -362,6 +406,10 @@ main .author .author-wrapper .author-pic {
           align-items: center;
 }
 
+main .author .author-wrapper .author-pic img {
+  width: 100%;
+}
+
 main .author .author-wrapper .text {
   width: 50%;
   display: -webkit-box;
@@ -385,6 +433,10 @@ main .author .author-wrapper .text a {
   color: #d69c1e;
   text-decoration: none;
   font-weight: bold;
+}
+
+main .labelMove {
+  margin-right: 50px;
 }
 
 main .contact {
@@ -434,6 +486,15 @@ main .contact form input[type=text], main .contact form input[type=email], main 
   border: #1a1a1a 1px solid;
 }
 
+main .contact form .checkBoxTerms input[type=checkbox] {
+  width: 20%;
+  margin-top: 20px;
+}
+
+main .contact form .checkBoxTerms label {
+  width: 80%;
+}
+
 main .contact form .buttons {
   margin-top: 30px;
   display: -webkit-box;
@@ -453,6 +514,7 @@ main .contact form .error {
   font-size: 12px;
   margin-top: 2px;
   color: red;
+  font-weight: bold;
 }
 
 main footer {
@@ -501,6 +563,9 @@ main footer .footer-links li a i {
 }
 
 @media screen and (max-width: 770px) {
+  .dugmeMeni {
+    display: block;
+  }
   header .container .logo a {
     font-size: 21px;
   }
@@ -528,35 +593,12 @@ main footer .footer-links li a i {
     -ms-flex-wrap: wrap !important;
         flex-wrap: wrap !important;
   }
-  .products .inner-products .product-proteins .picture {
+  .products .inner-products .product-proteins .product {
     width: 48% !important;
     text-align: center !important;
-  }
-  .products .inner-products .product-proteins .picture img {
-    width: 50% !important;
   }
   .staff .staff-heading {
     font-size: 25px !important;
-  }
-  .staff .inner-staff .staff-bio {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .staff .inner-staff .staff-bio .member {
-    width: 48% !important;
-    text-align: center !important;
-  }
-  .staff .inner-staff .staff-bio .member img {
-    width: 70% !important;
   }
   footer .footer-links li a {
     font-size: 10px !important;
@@ -573,17 +615,11 @@ main footer .footer-links li a i {
   main .author .author-wrapper .text p {
     padding-top: 10px;
   }
-  header .container .logo {
-    width: 60% !important;
-  }
-  .products .inner-products .product-proteins .picture {
+  .products .inner-products .product-proteins .product {
     width: 100% !important;
   }
   .staff .staff-heading {
     font-size: 25px !important;
-  }
-  .staff .inner-staff .staff-bio .member {
-    width: 100% !important;
   }
   .contact .contact-heading {
     font-size: 30px;

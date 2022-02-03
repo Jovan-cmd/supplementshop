@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/scss/style.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"/>
-    
     <title>Supplement Shop</title>
 </head>
 <body>
@@ -24,21 +25,21 @@
             <li><a href="#products">Products</a></li>
             <li><a href="#author">Author</a></li>
             <li><a href="#contact">Contact</a></li>
-           
         </ul>
     </div>
-
     <header>
-       
         <div class="container">
             <div class="logo">
                 <h1><a href="index.html"><span>S</span>upplement <span>S</span>hop</a></h1>
             </div>
-            <a href="#" class="toggle-button" onclick="openMenu()">
+            <div class="dugmeMeni">
+                <i class="fas fa-bars" id="menuDugme"></i>
+            </div>
+            <!-- <a href="#" class="toggle-button" onclick="openMenu()">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </a>
+            </a> -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -66,21 +67,25 @@
         </div>
         <section class="products" id="products">
             <div class="products-heading"><h3>PRODUCTS</h3>
+            <p>Click on the card to read more...</p>
             </div>
 
-            <div id="inner-products" class="inner-products">
-                <!-- generated with javascript-->
+            <div class="inner-products">
+                <div class="product-proteins" id="product-proteins">
+                    <!-- generated with javascript-->
+                </div>
             </div>
           
         </section>
         <section class="staff">
             <div class="staff-heading"><h3>OUR STAFF</h3></div>
 
-            <div id="inner-staff" class="inner-staff">
-                <!-- generated with javascript -->
+            <div class="inner-staff">
+                <div class="staff-bio" id="staff-bio">
+                    <!-- generated with javascript-->
+                </div>
             </div>
         </section>
-
        <section class="author" id="author">
            <div class="author-heading">
                <h3>ABOUT AUTHOR</h3>
@@ -91,20 +96,17 @@
                 </div>
                 <div class="text">
                     <p>Hello,my name is Jovan Šinik and I am 20 years old.I was born on 29th of April 2001 in Belgrade,Serbia.I gratuated Gymnasium in my hometown Obrenovac in 2020 and enrolled on ICT College of Vocational Studies in 2021.My love for web development and design began when I was on first year of high school and I proceeded to fullfil that dream through my education in this school.
-                        My goal is to specialize in domain of web designing,programming and SEO optimizing and managing data structures.I hope that I will finish my education as soon as possible so I can commit to my projects,as well as projects of my clients.For more information visit my <a href="https://jovan-cmd.github.io/portfolio/">Portfolio</a>!
+                        My goal is to specialize in domain of web designing,programming and SEO optimizing and managing data structures.I hope that I will finish my education as soon as possible so I can commit to my projects,as well as projects of my clients.For more information visit my <a href="https://jovan-cmd.github.io/portfolio/" target="_blank">Portfolio</a>!
     
                     </p>
                 </div>
            </div>
         </section>
-       
-
        <section class="contact" id="contact">
             <div class="contact-heading">
                 <h3> To make results with us, fill the form! </h3>
             </div>
             <form id="form">
-                <span class="error"></span>
                 <input id="name" type="text" placeholder="First and last name"/>
                 <span class="error"></span>
                 <input id="email" type="email" placeholder="E-mail"/>
@@ -114,6 +116,18 @@
                 <select name="trainer" id="trainer">
                     <!-- generated with javascript -->
                 </select>
+                <span class="error"></span>
+                <div class="gender">
+                    <p>Are you?</p>
+                    <input type="radio" name="gender" id="male" value="male"/> <label class="labelMove" for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"/> <label for="female">Female</label>
+                </div>
+                <span class="error"></span>
+                <div class="checkBoxTerms">  
+                    <input id="terms" name="terms" type="checkbox"/>
+                    <label for="terms">I agree with Terms and Conditions</label>
+                </div>
+                <span class="error"></span>
                 <div class="buttons">
                     <button type="submit">
                         Order Appointment
@@ -131,16 +145,11 @@
                 <li><a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
                 <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn </a></li>
                 <li><a href="Documentation.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Documentation </a></li>
-            </ul>
-            
+            </ul>     
        </footer>
-
-
-
-    </main>    
-
+    </main>
     <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/contact.js"></script>
 </body>
 </html>
