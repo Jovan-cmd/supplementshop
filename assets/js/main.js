@@ -139,10 +139,22 @@ form.addEventListener("submit", (e) => {
     checkTerms();
     genderBool = checkGender();
     if (trainerBool && nameBool && emailBool && ageBool && termsBool){
-        alert("Thank you for ordering your training plan, we will contact you soon!");
-        setTimeout("location.reload(true);",0);
+        showToast();  
+      // setTimeout(() => location.reload(), 3000);
+        form.reset();
     }
 });
+
+function showToast() {
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+
 
 form.addEventListener("reset", () => {
     for(let i = 0; i < inputErrors.length; i++){
