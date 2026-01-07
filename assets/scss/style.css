@@ -394,7 +394,7 @@ main .author .author-wrapper {
 }
 
 main .author .author-wrapper .author-pic {
-  width: 50%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
