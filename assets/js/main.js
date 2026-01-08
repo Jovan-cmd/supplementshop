@@ -286,7 +286,6 @@ links.forEach(link => {
   li.appendChild(a);
   ul.appendChild(li);
 });
-
 footer.appendChild(ul);
 
 
