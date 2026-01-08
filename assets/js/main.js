@@ -235,3 +235,71 @@ $(nameSurname).blur(checkName);
 $(email).blur(checkEmail);
 $(age).blur(checkAge);
 $(trainer).blur(checkTrainer);
+
+
+const links = [
+  {
+    url: "https://www.facebook.com/",
+    icon: "fab fa-facebook",
+    text: "Facebook"
+  },
+  {
+    url: "https://www.instagram.com/",
+    icon: "fab fa-instagram",
+    text: "Instagram"
+  },
+  {
+    url: "https://www.twitter.com/",
+    icon: "fab fa-twitter",
+    text: "Twitter"
+  },
+  {
+    url: "https://www.linkedin.com/",
+    icon: "fab fa-linkedin",
+    text: "LinkedIn"
+  },
+  {
+    url: "Dokumentacija_finalno.pdf",
+    icon: "fas fa-file-pdf",
+    text: "Documentation"
+  }
+];
+
+let footer = document.getElementById("footer");
+
+let ul = document.createElement("ul");
+ul.className = "footer-links";
+
+links.forEach(link => {
+  let li = document.createElement("li");
+  let a = document.createElement("a");
+
+  a.href = link.url;
+  a.target = "_blank";
+
+  let icon = document.createElement("i");
+  icon.className = link.icon;
+
+  a.appendChild(icon);
+  a.append(" " + link.text);
+
+  li.appendChild(a);
+  ul.appendChild(li);
+});
+
+footer.appendChild(ul);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
