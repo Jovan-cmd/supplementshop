@@ -208,7 +208,7 @@ function checkEmail() {
 
 function checkAge() {
     if (!regexAge.test(age.value)) {
-        inputErrors[2].innerHTML = "Please input a number of years,you must be 16 or older";
+        inputErrors[2].innerHTML = "Please input your age, you must be 16 or older";
         ageBool = false;
     }
     else if(parseInt(age.value) < 16){
